@@ -1,0 +1,40 @@
+{
+  "deck": {
+    "id": "deck-sample-1",
+    "title": "Schnelle Tech‑Facts",
+    "description": "Kurze Fakten zu Programmierung & Web",
+    "language": "de-DE",
+    "tags": ["tech","grundlagen"],
+    "createdAt": "2026-01-14T12:00:00Z",
+    "updatedAt": "2026-01-14T12:00:00Z",
+    "authorId": "local"
+  },
+  "cards": [
+    {
+      "id": "card-1",
+      "deckId": "deck-sample-1",
+      "type": "fact",
+      "front": "Was ist der Unterschied zwischen HTTP und HTTPS?",
+      "back": "HTTPS ist HTTP über TLS/SSL — es verschlüsselt die Verbindung, so dass Daten nicht einfach mitgelesen oder verändert werden können.",
+      "tags": ["netzwerk","security"],
+      "difficulty": "easy",
+      "estimatedSeconds": 30,
+      "locale": "de-DE",
+      "createdAt": "2026-01-14T12:00:00Z",
+      "meta": { "version": 1, "aiGenerated": false }
+    },
+    {
+      "id": "card-2",
+      "deckId": "deck-sample-1",
+      "type": "fact",
+      "front": "Nenne drei HTTP‑Methoden",
+      "back": "GET, POST, PUT (es gibt noch DELETE, PATCH, OPTIONS usw.)",
+      "tags": ["http"],
+      "difficulty": "easy",
+      "estimatedSeconds": 20,
+      "locale": "de-DE",
+      "createdAt": "2026-01-14T12:01:00Z",
+      "meta": { "version": 1, "aiGenerated": false }
+    }
+  ]
+}
