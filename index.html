@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MicroLearn — Bite-sized Facts</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <h1>MicroLearn</h1>
+    <div class="controls">
+      <select id="deckSelect"></select>
+      <button id="newDeckBtn">+ Deck</button>
+      <button id="newCardBtn">+ Card</button>
+      <button id="importBtn">Import</button>
+      <button id="exportBtn">Export</button>
+      <input id="fileInput" type="file" accept=".json" style="display:none" />
+    </div>
+  </header>
+
+  <main>
+    <section id="cardArea">
+      <div id="cardStack">
+        <!-- cards injected here -->
+      </div>
+      <div id="actions">
+        <button id="skipBtn">← Skip</button>
+        <button id="flipBtn">Flip</button>
+        <button id="knowBtn">Know →</button>
+      </div>
+    </section>
+
+    <aside id="side">
+      <h2>Deck Info</h2>
+      <div id="deckInfo"></div>
+      <h3>Stats</h3>
+      <div id="stats"></div>
+      <hr/>
+      <h3>How to</h3>
+      <ol>
+        <li>Wähle ein Deck oder erstelle ein neues.</li>
+        <li>Wische rechts = weiß ich, links = weiter / skip.</li>
+        <li>Import/Export zum Teilen (JSON).</li>
+      </ol>
+    </aside>
+  </main>
+
+  <!-- Edit Modal -->
+  <div id="modal" class="modal hidden" role="dialog" aria-hidden="true">
+    <form id="modalForm" class="modal-content">
+      <h3 id="modalTitle">Card bearbeiten</h3>
+      <label>
+        Front (Trigger / Frage)
+        <textarea id="frontInput" required></textarea>
+      </label>
+      <label>
+        Back (Fakt / Antwort)
+        <textarea id="backInput" required></textarea>
+      </label>
+      <label>
+        Tags (Komma getrennt)
+        <input id="tagsInput" />
+      </label>
+      <div class="modal-actions">
+        <button type="button" id="cancelBtn">Abbrechen</button>
+        <button type="submit" id="saveBtn">Speichern</button>
+      </div>
+    </form>
+  </div>
+
+  <template id="cardTemplate">
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front"></div>
+        <div class="card-back"></div>
+      </div>
+    </div>
+  </template>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
